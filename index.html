@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Guessing Game Final Project</title>
+</head>
+
+<body id="body">
+
+   <div id="r1">
+       <div id="clr">
+           <input type="radio" name="colr" id="balckclr" value="gray"
+           onchange="colorChange(this.value)"> Dark Mode
+
+           <input type="radio" name="colr" id="Azureclr" value="azure"
+           onchange="colorChange(this.value)"> Light Mode
+       </div>
+   </div>
+   <div id="board"></div>
+
+    <div id="container2" class="outPopUp">
+        <div class="row mid2">
+            <h1>Guess the number</h1>
+            <input type="text" id="fname" name="firstname" placeholder="Player Name">
+        </div>
+        <div class="row">
+            <button type="button" class="button_design_start " id="startBtn" onclick="startGame()">Start</button>
+            <button class="button_design_start" id="endBtn" onclick="self.close()">Exit</button>
+        </div>
+    </div>
+
+    <div id="container" class="outPopUp2">
+        <div class="row">
+            <h3 id="Header"></h3>
+            <br><br><br>
+        </div>
+        
+        <div class="row">
+            <button type="button" class="button_design" id="1" onclick="buttonPressed(1)">1</button>
+            <button type="button" class="button_design" id="2" onclick="buttonPressed(2)">2</button>
+            <button type="button" class="button_design" id="3" onclick="buttonPressed(3)">3</button>
+            <button type="button" class="button_design" id="4" onclick="buttonPressed(4)">4</button>
+            <button type="button" class="button_design" id="5" onclick="buttonPressed(5)">5</button>
+            <button type="button" class="button_design" id="6" onclick="buttonPressed(6)">6</button>
+            <button type="button" class="button_design" id="7" onclick="buttonPressed(7)">7</button>
+            <button type="button" class="button_design" id="8" onclick="buttonPressed(8)">8</button>
+            <button type="button" class="button_design" id="9" onclick="buttonPressed(9)">9</button>
+            <button type="button" class="button_design" id="10" onclick="buttonPressed(10)">10</button>
+        </div>
+        <div class="row">
+            <button type="button" class="button_design_start " id="retry" onclick="startGame()">Restart</button>
+            <button id="exit" class="button_design_start" onclick="self.close()">Exit</button>
+            <h2 id="endLable"></h2>
+            <p id="comments"></p>
+        </div>
+    </div>
+</body>
+
+<script src="app.js"></script>
+
+</html>
